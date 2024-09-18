@@ -1,0 +1,51 @@
+body {
+    height: 500px;
+    width:900px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 260px;
+    margin-top: 100px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 180px solid pink;
+}
+
+.pentagon {
+    position: relative;
+    width: 90px;
+    box-sizing: content-box;
+    border-width: 85px 30px 0;
+    border-style: solid;
+    border-color: rgb(255, 98, 124);
+}
+  
+.pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -155px;
+    left: -31px;
+    border-width: 0 75px 70px;
+    border-style: solid;
+    border-color: transparent transparent rgb(255, 98, 124);
+}
+
+.hexagon {
+    height: 180px; /* adjust to control the size  */
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+    background: pink;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

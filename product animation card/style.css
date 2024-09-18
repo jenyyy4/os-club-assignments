@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(198, 134, 134);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    width: 300px;
+    height: 410px;
+    perspective: 1000px;
+    transition: transform 0.5s ease;
+  }
+
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card:hover .inner {
+    transform: rotateY(180deg);
+  }
+
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .front {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .product-info {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .product-info h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: rgb(104, 16, 16);
+  }
+
+  .product-info p {
+    font-size: 18px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .back {
+    background-color: rgb(104, 16, 16);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .back p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .back button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    color: rgb(104, 16, 16);;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .back button:hover {
+    background-color: #ddd;
+  }
